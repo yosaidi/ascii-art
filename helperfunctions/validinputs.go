@@ -1,4 +1,4 @@
-package main
+package ascii
 
 func AreStringValid(runes []rune) (bool, rune) {
 	for _, char := range runes {
