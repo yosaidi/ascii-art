@@ -1,10 +1,10 @@
 package ascii
 
-func AreStringValid(runes []rune) (bool, rune) {
+func AreStringValid(runes []rune) bool {
 	for _, char := range runes {
 		if (char < 32 || char > 126) && char != '\n' {
-			return false, char
+			return false
 		}
 	}
-	return true, 0
+	return true
 }

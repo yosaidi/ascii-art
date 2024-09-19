@@ -16,24 +16,23 @@ func main() {
 	input = strings.ReplaceAll(input, `\n`, "\n")
 
 	runes := []rune(input)
-	isValid, char := ascii.AreStringValid(runes)
+	isValid := ascii.AreStringValid(runes)
 	if !isValid {
-		fmt.Println("invalid character : ", string(char))
+		fmt.Println("invalid character in your input  ")
 		return
 	}
 	myString := ascii.ReadFile()
 
 	lines := strings.Split(input, "\n")
-
 	for _, line := range lines {
 		if line == "" || line == " " {
 			fmt.Println()
 			continue
 		}
 		newInput := strings.Fields(line)
+
 		for row := 1; row < 9; row++ {
 			for _, word := range newInput {
-
 				wordRunes := []rune(word)
 				for j := 0; j < len(wordRunes); j++ {
 					char := wordRunes[j]
