@@ -43,7 +43,7 @@ func main() {
 					starts := (int(char) - 32) * 9
 					fmt.Print(myString[starts+row])
 				}
-				fmt.Print(" ")
+				
 			}
 			fmt.Println()
 		}
