@@ -26,7 +26,7 @@ func main() {
 	lines := strings.Split(input, "\n")
 	for i, line := range lines {
 		if line == "" || line == " " {
-			if i== len(lines)-1 && line==""{
+			if i== len(lines)-1{
 				continue
 			}
 			fmt.Println()
