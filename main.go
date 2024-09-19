@@ -22,10 +22,11 @@ func main() {
 		return
 	}
 	myString := ascii.ReadFile()
-
 	lines := strings.Split(input, "\n")
+
 	for i, line := range lines {
-		if line == "" || line == " " {
+	
+		if line == "" {
 			if i== len(lines)-1{
 				continue
 			}
