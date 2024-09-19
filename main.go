@@ -24,8 +24,11 @@ func main() {
 	myString := ascii.ReadFile()
 
 	lines := strings.Split(input, "\n")
-	for _, line := range lines {
+	for i, line := range lines {
 		if line == "" || line == " " {
+			if i== len(lines)-1 && line==""{
+				continue
+			}
 			fmt.Println()
 			continue
 		}
