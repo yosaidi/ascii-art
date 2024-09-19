@@ -33,7 +33,7 @@ func main() {
 			fmt.Println()
 			continue
 		}
-		newInput := strings.Fields(line)
+		newInput := ascii.SpaceManager(line)
 
 		for row := 1; row < 9; row++ {
 			for _, word := range newInput {
