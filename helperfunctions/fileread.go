@@ -6,8 +6,8 @@ import (
 	"os"
 )
 
-func ReadFile() []string {
-	fileName := "templates/standard.txt"
+func ReadFile(banner string) []string {
+	fileName := "templates/" + banner + ".txt"
 	input, err := os.Open(fileName)
 	if err != nil {
 		fmt.Println(err)
