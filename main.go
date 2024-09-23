@@ -8,11 +8,11 @@ import (
 )
 
 func main() {
-	if len(os.Args) != 3 && len(os.Args) != 2 {
+	if len(os.Args) >4 {
 		fmt.Println("invalid args")
 		return
 	}
-	input := os.Args[1]
+	input := os.Args[2]
 	input = strings.ReplaceAll(input, `\n`, "\n")
 
 	runes := []rune(input)
@@ -21,7 +21,22 @@ func main() {
 		fmt.Println("invalid character in your input  ")
 		return
 	}
+
+	filename:=""
+	font:="standard"
 	
-	ascii.Print(&input)
+		if strings.HasPrefix(os.Args[1], "--output=") &&
+			strings.HasSuffix(os.Args[1], ".txt") {
+				filename = os.Args[1][9:]
+		
+		if os.Args[3] == "standard"||  os.Args[3]=="thinkertoy" || os.Args[3] == "shadow" {
+			font = os.Args[3]
+		}
+
+	}
+
+	
+
+	ascii.Print(&input, filename,font)
 
 }
