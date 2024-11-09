@@ -12,7 +12,7 @@ func main() {
 		fmt.Println("invalid args")
 		return
 	}
-	input := os.Args[2]
+	input := os.Args[1]
 	input = strings.ReplaceAll(input, `\n`, "\n")
 
 	runes := []rune(input)
@@ -22,21 +22,9 @@ func main() {
 		return
 	}
 
-	filename:=""
 	font:="standard"
 	
-		if strings.HasPrefix(os.Args[1], "--output=") &&
-			strings.HasSuffix(os.Args[1], ".txt") {
-				filename = os.Args[1][9:]
-		
-		if os.Args[3] == "standard"||  os.Args[3]=="thinkertoy" || os.Args[3] == "shadow" {
-			font = os.Args[3]
-		}
-
-	}
-
 	
-
-	ascii.Print(&input, filename,font)
+	ascii.Print(&input,font)
 
 }
