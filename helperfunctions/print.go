@@ -1,9 +1,7 @@
 package ascii
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 	"strings"
 )
 
